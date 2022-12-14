@@ -1,31 +1,39 @@
 import 'package:flutter/cupertino.dart';
 
 class HomeController extends ChangeNotifier {
-  int selectedBottomTab=0;
-  void onBottomNavigationTabChange(int index){
-    selectedBottomTab=index;
+  int selectedBottomTab = 0;
+  void onBottomNavigationTabChange(int index) {
+    selectedBottomTab = index;
     notifyListeners();
   }
 
   bool isRightDoorLock = true;
-  bool isLeftDoorLock=true;
-  bool isBonnetLock=true;
-  bool isTrunkLock=true;
+  bool isLeftDoorLock = true;
+  bool isBonnetLock = true;
+  bool isTrunkLock = true;
   void updateRightDoorLock() {
     isRightDoorLock = !isRightDoorLock;
     notifyListeners();
   }
 
-  void updateLeftDoorLock(){
-    isLeftDoorLock=!isLeftDoorLock;
+  void updateLeftDoorLock() {
+    isLeftDoorLock = !isLeftDoorLock;
     notifyListeners();
   }
-  void updateBonnetDoorLock(){
-    isBonnetLock=!isBonnetLock;
+
+  void updateBonnetDoorLock() {
+    isBonnetLock = !isBonnetLock;
     notifyListeners();
   }
-  void updateTrunkLock(){
-    isTrunkLock=!isTrunkLock;
+
+  void updateTrunkLock() {
+    isTrunkLock = !isTrunkLock;
+    notifyListeners();
+  }
+
+  bool isCoolSelected = true;
+  void updateCoolSelectedTab() {
+    isCoolSelected = !isCoolSelected;
     notifyListeners();
   }
 }
